@@ -17,38 +17,52 @@ You can find us most days on freenode irc at #system-zoo or #Juju.
 
 #### Projects of note:
 
-- Docker Charm & Friends
- - [Docker Charm](http://github.com/chuckbutler/docker-charm)
-   A charm for deploying a cluster of docker hosts that support extension by charms for service discovery, networking, logging and other fine things. 
- - [Swarm Charm](http://github.com/whitmo/swarm-charm)
+**Docker Charm & Friends**
+
+**[Docker Charm](http://github.com/chuckbutler/docker-charm)**<br />
+   A charm for deploying a cluster of docker hosts that support extension by charms for service discovery, networking, logging and other fine things.
+
+**[Swarm Charm](http://github.com/whitmo/swarm-charm)**<br />
    A subordinate charm which enables the use of swarm for scheduling and placement onto host deployed with the docker charm
- - [Registrator Charm](https://github.com/whitmo/registrator-charm)
+
+**[Registrator Charm](https://github.com/whitmo/registrator-charm)**<br />
    A subordinate charm enabling charm deployed docker hosts service discovery via etcd or consul.
- - [Logspout Charm](https://github.com/chuckbutler/logspout-charm)
+
+**[Logspout Charm](https://github.com/chuckbutler/logspout-charm)**<br />
    Log shipping for charm deployed docker hosts
- - [Flannel-docker Charm](https://github.com/chuckbutler/flannel-docker-charm)
+
+**[Flannel-docker Charm](https://github.com/chuckbutler/flannel-docker-charm)**<br />
    Subordinate charm for SDN for charm deployed docker hosts
- - [Calico-docker Charm](https://github.com/chuckbutler/calico-docker-charm)
+
+**[Calico-docker Charm](https://github.com/chuckbutler/calico-docker-charm)**<br />
    Subordinate charm for SDN for charm deployed docker hosts
- - [Kubernetes bundle](https://github.com/GoogleCloudPlatform/kubernetes/tree/master/cluster/Juju/bundles)
+
+**[Kubernetes bundle](https://github.com/GoogleCloudPlatform/kubernetes/tree/master/cluster/Juju/bundles)**<br />
    a configurable multi-cloud solution for deploying and managing k8s that runs atop the docker charm to provide scheduling and loadbalancing for docker containers.
- - [Hakkasan](https://github.com/chuckbutler/container-dynamics-bundle)
+
+**[Hakkasan](https://github.com/chuckbutler/container-dynamics-bundle)**<br />
    Pluggable ad hoc docker orchestration stack solution w/ dns, service discovery and load balancing.
- - [Consul charm](https://github.com/mbruzek/consul-charm.git)
+
+**[Consul charm](https://github.com/mbruzek/consul-charm.git)**<br />
   Deploy and manage a consul cluster
- - [Etcd charm](https://github.com/chuckbutler/etcd-charm.git)
+
+**[Etcd charm](https://github.com/chuckbutler/etcd-charm.git)**<br />
   Deploy and manage an etcd cluster
- - [Drone Charm](https://github.com/chuckbutler/drone-ci-charm)
+
+**[Drone Charm](https://github.com/chuckbutler/drone-ci-charm)**<br />
   CI/CD solution for containers
- - [DNS Charm](https://github.com/chuckbutler/dns-charm.git)
+
+**[DNS Charm](https://github.com/chuckbutler/dns-charm.git)**<br />
   Manage and "orchestrate" your DNS via a polymorphic service charm. Supports
   offline installation to provide a Bind9 authoritative master, or proxy requests
   to your DNS provider of choice. Illustrates embedding a plugin architecture into
   charms, complete with Dependency management and testing structure.
- - [Docker NGINX Charm](https://github.com/chuckbutler/docker-nginx-charm)
+
+**[Docker NGINX Charm](https://github.com/chuckbutler/docker-nginx-charm)**<br />
   (an example for charming with docker) Leverage an existing docker container of your service, and deploy it with a Juju charm.
 
-- Charm processes - Juju native plugins for handling container runtimes and other long running processes
+**Service process handling for charms**<br />
+Juju native plugins for handling container runtimes and other long running processes
 
 
 #### Fun projects:
@@ -114,7 +128,3 @@ interesting, we'd love to chat!
  You can find us in [#system-zoo](https://webchat.freenode.net/?channels=systemzoo)
 on irc.freenode.net, with an upcoming schedule of media, podcasts, and blog
 forthcoming as time allows.
-
-
-
-
