@@ -1,9 +1,9 @@
 # Charming with Docker
 You have a Docker container and you heard about Juju.  Juju can deploy your
-Docker container. This document will outline the best practices for using Juju
-to deploy Docker images.
+Docker container to any cloud. This document will outline the best practices
+for using Juju to deploy Docker images.
 
-## Assumptions
+### First things first
 This document assumes you already know about [Docker](http://docker.com) and
 how to create, pull and use containers.
 [Juju](https://jujucharms.com/docs/stable/about-juju) may be a new
@@ -23,11 +23,46 @@ install, configuration, and relations. To deliver a Docker image with Juju you
 would write a charm that Juju can deploy to any cloud.
 
 ### The traditional charming process
-The traditional way of creating a Juju charm is to encapsulate the all the
+The [traditional](https://jujucharms.com/docs/master/authors-charm-writing)
+method of creating a Juju charm is to encapsulate the all the
 install and configuration of a service in what Juju calls
-[hooks](https://jujucharms.com/docs/stable/authors-charm-hooks). You will need
-to understand the concepts of charming to deliver software with Juju.
+[hooks](https://jujucharms.com/docs/stable/authors-charm-hooks). Juju runs
+individual hook files when certain events occur.  The key is to understand the
+event model and write hooks that are appropriate for that model.  You will need
+to understand these concepts of charming to deliver software with Juju.
 
-### The new charming process
+### Reactive and composing charms
+#### Reactive
+Another software pattern is reactionary.  Do somethign when the state or
+conditions are correct.  If this is more natural you might want to check out
+what we call the [charms.reactive](http://pythonhosted.org/charms.reactive/).  
+In the charms.reactive code execution is controlled by boolean logic.
+You can define when the conditions are right, run this code, or when something
+is not set, run different code.
+
+### Composition
 The concept of building off of other things is nothing new.  The idea of
-compsing
+composition is to combine objects or data into more complex objects or data.
+When applied to Charms, composition allow you to extend or build off other
+charms to make more complex or useful charms.  The `compose.yaml` file in the
+root directory of the charm controls what layer(s) will be imported.
+
+#### Reactive Charms
+The docker charm makes use of the [charms.reactive] python framework. The code
+for the docker layer can be found in the `reactive/` folder in the root charm
+directory.
+
+#### Composing Charms
+The docker charm makes use of the
+[Charm Composition](https://jujucharms.com/docs/master/authors-charm-composing)
+concept building off the base charm and creating its own layer of added
+functionality.  The docker charm serves as a base for other charms and allows
+people to extend and make docker based charms of their own.
+
+## layer-docker charm
+The layer-docker charm can be found on github.com at :
+<https://github.com/juju-solutions/layer-docker>
+
+Again this charm is designed to be a base for other docker charms.  If you want
+an example of a charm that extends the layer-docker charm check out the
+layer-docker-nginx charm <https://github.com/juju-solutions/layer-docker-nginx>.
