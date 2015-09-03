@@ -28,17 +28,18 @@ method of creating a Juju charm is to encapsulate the all the
 install and configuration of a service in what Juju calls
 [hooks](https://jujucharms.com/docs/stable/authors-charm-hooks). Juju runs
 individual hook files when certain events occur.  The key is to understand the
-event model and write hooks that are appropriate for that model.  You will need
+event paradigm and write hooks that are appropriate for that model.  You will need
 to understand these concepts of charming to deliver software with Juju.
 
 ### Reactive and composing charms
 #### Reactive
-Another software pattern is reactionary.  Do somethign when the state or
-conditions are correct.  If this is more natural you might want to check out
-what we call the [charms.reactive](http://pythonhosted.org/charms.reactive/).  
-In the charms.reactive code execution is controlled by boolean logic.
-You can define when the conditions are right, run this code, or when something
-is not set, run different code.
+Another software paradigm is
+[reactive programming](https://en.wikipedia.org/wiki/Reactive_programming). Do
+something when the state or conditions are correct. Juju offers the
+[charms.reactive](http://pythonhosted.org/charms.reactive/) package to allow
+charms to be written in the reactive paradigm. In the charms.reactive code
+execution is controlled by boolean logic. You can define when the conditions
+are right, run this code, or when something is not set, run different code.
 
 ### Composition
 The concept of building off of other things is nothing new.  The idea of
@@ -48,9 +49,10 @@ charms to make more complex or useful charms.  The `compose.yaml` file in the
 root directory of the charm controls what layer(s) will be imported.
 
 #### Reactive Charms
-The docker charm makes use of the [charms.reactive] python framework. The code
-for the docker layer can be found in the `reactive/` folder in the root charm
-directory.
+The docker charm makes use of the
+[charms.reactive](http://pythonhosted.org/charms.reactive/) python framework.
+The code for the docker layer can be found in the `reactive/` folder in the
+root charm directory.
 
 #### Composing Charms
 The docker charm makes use of the
@@ -60,7 +62,7 @@ functionality.  The docker charm serves as a base for other charms and allows
 people to extend and make docker based charms of their own.
 
 ## layer-docker charm
-The layer-docker charm can be found on github.com at :
+The layer-docker charm can be found on github.com at:
 <https://github.com/juju-solutions/layer-docker>
 
 Again this charm is designed to be a base for other docker charms.  If you want
