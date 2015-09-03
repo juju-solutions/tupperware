@@ -34,13 +34,12 @@ to understand these concepts of charming to deliver software with Juju.
 ### Reactive and composing charms
 #### Reactive
 Another software paradigm is
-[reactive programming](https://en.wikipedia.org/wiki/Reactive_programming).  
-Do something when the state or conditions are correct.  
-Juju offers the [charms.reactive](http://pythonhosted.org/charms.reactive/)
-package to allow charms to be written in the reactive paradigm.
-In the charms.reactive code execution is controlled by boolean logic.
-You can define when the conditions are right, run this code, or when something
-is not set, run different code.
+[reactive programming](https://en.wikipedia.org/wiki/Reactive_programming). Do
+something when the state or conditions are correct. Juju offers the
+[charms.reactive](http://pythonhosted.org/charms.reactive/) package to allow
+charms to be written in the reactive paradigm. In the charms.reactive code
+execution is controlled by boolean logic. You can define when the conditions
+are right, run this code, or when something is not set, run different code.
 
 ### Composition
 The concept of building off of other things is nothing new.  The idea of
