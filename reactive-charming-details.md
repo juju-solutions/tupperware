@@ -116,19 +116,17 @@ installed and configured.  The install_nginx function sets the state
 ```python
 @when('docker.available')
 def install_nginx():
-  @when('docker.available')
-  def install_nginx():
-      '''
-      Default to only pulling the image once. A forced upgrade of the image is
-      planned later. Updating on every run may not be desireable as it can leave
-      the service in an inconsistent state.
-      '''
-      if reactive.is_state('nginx.available'):
-          return
-      copy_assets()
-      hookenv.status_set('maintenance', 'Pulling Nginx image')
-      check_call(['docker', 'pull', 'nginx'])
-      reactive.set_state('nginx.available')
+    '''
+    Default to only pulling the image once. A forced upgrade of the image is
+    planned later. Updating on every run may not be desireable as it can leave
+    the service in an inconsistent state.
+    '''
+    if reactive.is_state('nginx.available'):
+        return
+    copy_assets()
+    hookenv.status_set('maintenance', 'Pulling Nginx image')
+    check_call(['docker', 'pull', 'nginx'])
+    reactive.set_state('nginx.available')
 ```
 
 #### run_container
