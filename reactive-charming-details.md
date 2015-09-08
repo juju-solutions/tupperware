@@ -73,7 +73,7 @@ The layer-docker-nginx charm adds the [Nginx](http://nginx.org/) HTTP server
 docker image to the layer-docker charm by using `charm compose` and also uses
 the reactive framework.  The
 [layer-docker-nginx charm](https://github.com/juju-solutions/layer-docker-nginx)
-can be found on github.method
+can be found on github.
 
 ## The reactive directory
 Inside the reactive directory of the layer-docker-nginx charm is a file
@@ -133,10 +133,10 @@ def install_nginx():
 This function handles running the nginx container which many Docker charms
 will have to do.  The run_container function is decorated with two decorators
 `@when('nginx.available', 'docker.available')` and `@when_not('nginx.started')`.
-The `@when` decorator indicates the desired stats and both must be set before
+The `@when` decorator indicates the desired states and both must be set before
 the run_container function is executed.  The `@when_not` decorator indicates
 the state that must not be active for this function to run. Since the
-run_container function sets the "nginx.started" state this insures the
+run_container function sets the "nginx.started" state this ensures the
 container is not started over and over again.
 ```python
 @when('nginx.available', 'docker.available')
@@ -175,7 +175,7 @@ The stop_container function is decorated with
 `@when('nginx.stop', 'docker.available')`.  The "nginx.stop" state is an
 indication to stop the container in which case it will set the "nginx.stopped"
 state. The decorator `@when_not('nginx.stopped')` protects this function from
-being called repeatedly. Note the `reactive.remote_state('nginx.stop')` and
+being called repeatedly. Note the `reactive.remove_state('nginx.stop')` and
 `reactive.set_state('nginx.stopped')`calls to assert a stopped state.
 ```python
 @when('nginx.stop', 'docker.available')
@@ -206,7 +206,7 @@ def stop_container():
 The configure_website_port is a function that handles the http relationship,
 specifically the port. This function is decorated with
 `@when('nginx.started', 'website.available')` to only run when Nginx is started
-and the webiste is available.
+and the website is available.
 
 ```python
 @when('nginx.started', 'website.available')
