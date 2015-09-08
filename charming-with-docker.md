@@ -69,16 +69,29 @@ root charm directory.
 The docker charm makes use of the
 [Charm Composition](https://jujucharms.com/docs/master/authors-charm-composing)
 concept building off the base charm and creating its own layer of added
-functionality.  The docker charm serves as a base for other charms and allows
-people to extend and make docker based charms of their own.
+functionality,
 
-### Ready to get started?
+### Start with Docker, and build your own
 
 #### layer-docker charm
 
 The layer-docker charm can be found on github.com at:
-<https://github.com/juju-solutions/layer-docker>
+<https://github.com/juju-solutions/layer-docker>. This charm encapsulates
+installation and lifecycle management of the Docker daemon, emitting events
+such as `docker.available`, and forthcoming support for the plugins that Docker
+is growing. This charm is designed to be a base for other docker charms.
 
-Again this charm is designed to be a base for other docker charms.  If you want
-an example of a charm that extends the layer-docker charm check out the
-layer-docker-nginx charm <https://github.com/juju-solutions/layer-docker-nginx>.
+This can be achieved by creating a new charm directory, and placing the following
+directives in your `composer.yaml`
+
+    includes: ['layer:docker']
+
+When you run `charm compose` the resulting charm will contain all of the logic
+to install and upgrade docker. Freeing you to focus on delivering your application
+layer and focus on how to do that.
+
+## A guided example
+The [Charming with Reactive and Docker](#)
+document does a great job of illustrating the workflow. The resulting charm will
+be a simple method to serve static content with NGinx, including a relation to
+a load balancer charm.
