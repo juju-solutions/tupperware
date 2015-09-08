@@ -7,11 +7,11 @@ The Canonical new workloads team has a charter to explore and engage with emerge
 Team core members:
 - @[chuckbutler](http://github.com/chuckbutler) [ [twitter](https://twitter.com/lazypower)] [ [email](mailto:charles.butler@canonical.com) ] [ [blog](http://blog.dasroot.net) ]
 - @[mbruzek](http://github.com/mbruzek) [ [twitter](https://twitter.com/mattatcanonical) ] [ [email](mailto:matthew.bruzek@canonical.com) ] [ [blog](http://bruzer.net) ]
-- @[whitmo](http://github.com/whitmo) [ [twitter](https://twitter/whit) ] [ [email](mailto:whit.morriss@canonical.com) ] [ [blog](http://bfh.whitmorriss.org) ]
 
 Team honorary members:
  - @[wwitzellIII](https://github.com/wwitzel3)
  - @[lukasa](https://github.com/lukasa)
+ - @[whitmo](http://github.com/whitmo) [ [twitter](https://twitter/whit) ] [ [blog](http://bfh.whitmorriss.org) ]
 
 You can find us most days on freenode irc at #system-zoo or #Juju.
 
