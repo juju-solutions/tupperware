@@ -8,6 +8,17 @@ when certain conditions exist, as if the code is reacting to those conditions.
 For the most complete information on charms.reactive go to
 <http://pythonhosted.org/charms.reactive/>
 
+
+## The Big Picture Decomposed
+
+We're going to be dissecting each section of the layers. To give you a top-down
+view of what we'll be examining, the following illustration will provide the
+"big picture" view of the end product as we start to decompose each of the
+layers and accompanying code.
+
+![](diagrams/charm-layers-decomposed.png)
+
+
 ## layer-docker charm
 An example of a charm using the reactive pattern is the
 [layer-docker charm](https://github.com/juju-solutions/layer-docker).
@@ -27,7 +38,7 @@ charm.  If you want to read more about compose in the Juju
 ```
 
 ### The reactive directory
-Making a charm "reactive" adds two directories (`reactive` and `relations`)
+Making a charm "reactive" adds two directories (`reactive` and `hooks/relations`)
 to the basic charm structure. The layer-docker charm only has a `reactive`
 directory because it does not add (or provide) any new relations.
 
@@ -61,7 +72,7 @@ be when it uses reactive and compose concepts.
 
 ## States
 
-States can be though of as persistent events.  The code using the reactive
+States can be thought of as persistent events.  The code using the reactive
 framework can set and remove states. Other code known as handlers can use the
 boolean logic to run when the state or combination of states is correct. States
 may be useful to other layers so it is very important to document in the
@@ -220,6 +231,11 @@ def configure_website_port(http):
     http.configure(port=serve_port)
     hookenv.status_set('active', '')
 ```
+
+## Fully Assembled Diagram
+
+![](diagrams/composed.png)
+
 
 ## Now write your own compose and reactive charm
 
