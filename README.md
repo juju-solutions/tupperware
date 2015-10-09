@@ -19,7 +19,7 @@ You can find us most days on freenode irc at #system-zoo or #Juju.
 
 **Docker Charm & Friends**
 
-**[Docker Charm](http://github.com/chuckbutler/docker-charm)**<br />
+**[Docker Charm](http://github.com/chuckbutler/docker-charm)** | [Charm Store](https://jujucharms.com/docker/trusty/) <br />
    A charm for deploying a cluster of docker hosts that support extension by charms for service discovery, networking, logging and other fine things.
 
 **[Swarm Charm](http://github.com/whitmo/swarm-charm)**<br />
@@ -31,13 +31,13 @@ You can find us most days on freenode irc at #system-zoo or #Juju.
 **[Logspout Charm](https://github.com/chuckbutler/logspout-charm)**<br />
    Log shipping for charm deployed docker hosts
 
-**[Flannel-docker Charm](https://github.com/chuckbutler/flannel-docker-charm)**<br />
+**[Flannel-docker Charm](https://github.com/chuckbutler/flannel-docker-charm)** | [Charm Store](https://jujucharms.com/flannel-docker/trusty/)<br />
    Subordinate charm for SDN for charm deployed docker hosts
 
 **[Calico-docker Charm](https://github.com/chuckbutler/calico-docker-charm)**<br />
    Subordinate charm for SDN for charm deployed docker hosts
 
-**[Kubernetes bundle](https://github.com/GoogleCloudPlatform/kubernetes/tree/master/cluster/Juju/bundles)**<br />
+**[Kubernetes bundle](https://github.com/kubernetes/kubernetes/tree/master/cluster/juju/bundles)** | [Charm Store](https://jujucharms.com/u/kubernetes/kubernetes-cluster/)<br />
    a configurable multi-cloud solution for deploying and managing k8s that runs atop the docker charm to provide scheduling and loadbalancing for docker containers.
 
 **[Hakkasan](https://github.com/chuckbutler/container-dynamics-bundle)**<br />
@@ -60,10 +60,6 @@ You can find us most days on freenode irc at #system-zoo or #Juju.
 
 **[Docker NGINX Charm](https://github.com/chuckbutler/docker-nginx-charm)**<br />
   (an example for charming with docker) Leverage an existing docker container of your service, and deploy it with a Juju charm.
-
-**Service process handling for charms**<br />
-Juju native plugins for handling container runtimes and other long running processes
-
 
 #### Fun projects:
 
@@ -93,6 +89,9 @@ infrastructure in a user friendly manner.
     Cache APT sources in an environment (on the same subnet) and distribute
     locally to speed up deployments/updates across a large cluster of services.
 
+**Service process handling for charms**<br />
+Juju native plugins for handling container runtimes and other long running processes
+
 
 ## Collaborating
 
@@ -115,7 +114,6 @@ Things we think would be awesome to implement.
 - Juju deploy-src: deploy charms and bundles directly from hosted scm
 - Mesos/Marathon/Aurora bundle
 - Juju provider for Marathon
-- Terraform provider that drives a Juju environment
 - Docker machine integration for docker charm
 
 ## Interested in Systems and workloads?
@@ -125,6 +123,6 @@ interesting workloads. We accept dabblers and hackers of all walks of life in
 development, ops, networking, social engineering, etc. If you're doing something
 interesting, we'd love to chat!
 
- You can find us in [#system-zoo](https://webchat.freenode.net/?channels=systemzoo)
+ You can find us in [#system-zoo](https://webchat.freenode.net/?channels=system-zoo)
 on irc.freenode.net, with an upcoming schedule of media, podcasts, and blog
 forthcoming as time allows.
