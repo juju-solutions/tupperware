@@ -11,7 +11,7 @@ Team core members:
 Team honorary members:
  - @[wwitzellIII](https://github.com/wwitzel3)
  - @[lukasa](https://github.com/lukasa)
- - @[whitmo](http://github.com/whitmo) [ [twitter](https://twitter/whit) ] [ [blog](http://bfh.whitmorriss.org) ]
+ - @[whitmo](http://github.com/whitmo) [ [twitter](https://twitter/whit) ]
 
 You can find us most days on freenode irc at #system-zoo or #Juju.
 
