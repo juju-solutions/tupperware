@@ -11,9 +11,34 @@ Team core members:
 Team honorary members:
  - @[wwitzellIII](https://github.com/wwitzel3)
  - @[lukasa](https://github.com/lukasa)
- - @[whitmo](http://github.com/whitmo) [ [twitter](https://twitter/whit) ] [ [blog](http://bfh.whitmorriss.org) ]
+ - @[whitmo](http://github.com/whitmo) [ [twitter](https://twitter/whit) ]
 
 You can find us most days on freenode irc at #system-zoo or #Juju.
+
+### UOS Announced projects for the current cycle
+
+[Watch the UOS 1115 session w/ the New Workloads team](https://youtu.be/S7xUVKCWAXU)
+
+#### Projects to watch:
+
+**[Docker Layer](http://github.com/juju-solutions/layer-docker)** | <br/>
+  A charm layer for use in the `charm build` process to provide Docker, its principal tooling (docker-compose), and maintain an up-to-date docker daemon on the unit.
+
+**[Flannel Layer](http://github.com/chuckbutler/layer-flannel)** | <br/>
+    Flannel is an overlay network developed by CoreOS. This particular charm layer
+    makes use of the Docker Layer, and delivers Flannel in a bootstrap docker
+    instance to configure docker networking on the host, delivered from an
+    app container, to effect change on the workload-runtime docker
+    on the unit.
+
+**[Kubernetes Layer](http://github.com/mbruzek/layer-k8s)** | <br/>
+    Kubernetes is a container orchestrator and scheduler. This layer is
+    built on top of the Docker Layer. This layer currently launches both
+    leader and worker nodes to each unit. This is a rewrite from the existing
+    k8's charm which does bin on host delivery to delivering K8s via docker
+    containers. It also ships with SkyDNS and Cadvisor visualization addons
+
+
 
 #### Projects of note:
 
