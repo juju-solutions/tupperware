@@ -1,5 +1,5 @@
 {
-  "name": "Vanilla Jekyll theme",
+  "name": "jekyll-vanilla-theme",
   "version": "0.0.1",
   "description": "A port of the Vanilla framework in Jekyll",
   "main": "index.js",
