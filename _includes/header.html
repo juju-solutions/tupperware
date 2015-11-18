@@ -11,7 +11,7 @@
         </div>
         <ul>
           {% for page in site.pages %}
-            {% if page.title %}
+            {% if page.title and page.nav %}
             <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
             {% endif %}
           {% endfor %}
