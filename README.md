@@ -4,19 +4,13 @@ Port of Vanilla framework to Jekyll theme.
 
 ## Usage
 
-First update the submodules to pull down the [vanilla-framework](https://github.com/ubuntudesign/vanilla-framework) dependency:
+Run the site as follows (depends on [vanilla-framework](https://github.com/ubuntudesign/vanilla-framework)):
 
 ```
-git submodule update
+git submodule update  # Creates _sass/vanilla-framework
+jekyll serve          # Run the site locally
 ```
 
-Now run the site locally:
-
-```bash
-jekyll serve
-```
-
-Then visit <http://127.0.0.1:4000/>
+Then visit <http://127.0.0.1:4000/>.
 
 Enjoy!
-
