@@ -38,16 +38,18 @@ You can find us most days on freenode irc at #system-zoo or #Juju.
     k8's charm which does bin on host delivery to delivering K8s via docker
     containers. It also ships with SkyDNS and Cadvisor visualization addons
 
-
+**[Charms.Docker](http://github.com/juju-solutions/charms.docker)** | <br/>
+    `charms.docker` provides charm authors a python library with a clean and readable way to interface with
+    the docker CLI as well as configure the Docker deamon via the DockerOpts manager.
 
 #### Projects of note:
 
 **Docker Charm & Friends**
 
-**[Docker Charm](http://github.com/chuckbutler/docker-charm)** | [Charm Store](https://jujucharms.com/docker/trusty/) <br />
+**DEPRECATED** **[Docker Charm](http://github.com/chuckbutler/docker-charm)** | [Charm Store](https://jujucharms.com/docker/trusty/) <br />
    A charm for deploying a cluster of docker hosts that support extension by charms for service discovery, networking, logging and other fine things.
 
-**[Swarm Charm](http://github.com/whitmo/swarm-charm)**<br />
+**DEPRECATED** **[Swarm Charm](http://github.com/whitmo/swarm-charm)**<br />
    A subordinate charm which enables the use of swarm for scheduling and placement onto host deployed with the docker charm
 
 **[Registrator Charm](https://github.com/whitmo/registrator-charm)**<br />
