@@ -39,7 +39,7 @@ You can find us most days on freenode irc at #system-zoo or #Juju.
     containers. It also ships with SkyDNS and Cadvisor visualization addons
 
 **[Charms.Docker](http://github.com/juju-solutions/charms.docker)** | <br/>
-    `charms.docker` provides charm authors a clean and readable way to interface with
+    `charms.docker` provides charm authors a python library with a clean and readable way to interface with
     the docker CLI as well as configure the Docker deamon via the DockerOpts manager.
 
 #### Projects of note:
