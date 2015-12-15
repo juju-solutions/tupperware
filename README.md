@@ -1,6 +1,6 @@
 # tupperware: containers and friends w/ Juju
 
-The Canonical new workloads team has a charter to explore and engage with emergent projects in server and cloud technology around how they might benefit or integrate with Juju, particularily in the solution space.
+The Canonical new workloads team has a charter to explore and engage with emergent projects in server and cloud technology around how they might benefit or integrate with Juju, particularly in the solution space.
 
 ## The new workloads team
 
@@ -42,33 +42,7 @@ You can find us most days on freenode irc at #system-zoo or #Juju.
     `charms.docker` provides charm authors a python library with a clean and readable way to interface with
     the docker CLI as well as configure the Docker deamon via the DockerOpts manager.
 
-#### Projects of note:
-
-**Docker Charm & Friends**
-
-**DEPRECATED** **[Docker Charm](http://github.com/chuckbutler/docker-charm)** | [Charm Store](https://jujucharms.com/docker/trusty/) <br />
-   A charm for deploying a cluster of docker hosts that support extension by charms for service discovery, networking, logging and other fine things.
-
-**DEPRECATED** **[Swarm Charm](http://github.com/whitmo/swarm-charm)**<br />
-   A subordinate charm which enables the use of swarm for scheduling and placement onto host deployed with the docker charm
-
-**[Registrator Charm](https://github.com/whitmo/registrator-charm)**<br />
-   A subordinate charm enabling charm deployed docker hosts service discovery via etcd or consul.
-
-**[Logspout Charm](https://github.com/chuckbutler/logspout-charm)**<br />
-   Log shipping for charm deployed docker hosts
-
-**[Flannel-docker Charm](https://github.com/chuckbutler/flannel-docker-charm)** | [Charm Store](https://jujucharms.com/flannel-docker/trusty/)<br />
-   Subordinate charm for SDN for charm deployed docker hosts
-
-**[Calico-docker Charm](https://github.com/chuckbutler/calico-docker-charm)**<br />
-   Subordinate charm for SDN for charm deployed docker hosts
-
-**[Kubernetes bundle](https://github.com/kubernetes/kubernetes/tree/master/cluster/juju/bundles)** | [Charm Store](https://jujucharms.com/u/kubernetes/kubernetes-cluster/)<br />
-   a configurable multi-cloud solution for deploying and managing k8s that runs atop the docker charm to provide scheduling and loadbalancing for docker containers.
-
-**[Hakkasan](https://github.com/chuckbutler/container-dynamics-bundle)**<br />
-   Pluggable ad hoc docker orchestration stack solution w/ dns, service discovery and load balancing.
+### Projects of note:
 
 **[Consul charm](https://github.com/mbruzek/consul-charm.git)**<br />
   Deploy and manage a consul cluster
@@ -79,6 +53,7 @@ You can find us most days on freenode irc at #system-zoo or #Juju.
 **[Drone Charm](https://github.com/chuckbutler/drone-ci-charm)**<br />
   CI/CD solution for containers
 
+
 **[DNS Charm](https://github.com/chuckbutler/dns-charm.git)**<br />
   Manage and "orchestrate" your DNS via a polymorphic service charm. Supports
   offline installation to provide a Bind9 authoritative master, or proxy requests
@@ -88,6 +63,37 @@ You can find us most days on freenode irc at #system-zoo or #Juju.
 **[Docker NGINX Charm](https://github.com/chuckbutler/docker-nginx-charm)**<br />
   (an example for charming with docker) Leverage an existing docker container of your service, and deploy it with a Juju charm.
 
+**[Registrator Charm](https://github.com/whitmo/registrator-charm)**<br />
+   A subordinate charm enabling charm deployed docker hosts service discovery via etcd or consul.
+
+**[Logspout Charm](https://github.com/chuckbutler/logspout-charm)**<br />
+   Log shipping for charm deployed docker hosts
+
+#### **Depreciated / Classic charms**
+
+**DEPRECATED** **[Docker Charm](http://github.com/chuckbutler/docker-charm)** | [Charm Store](https://jujucharms.com/docker/trusty/) <br />
+   A charm for deploying a cluster of docker hosts that support extension by charms for service discovery, networking, logging and other fine things.
+
+**DEPRECATED** **[Swarm Charm](http://github.com/whitmo/swarm-charm)**<br />
+   A subordinate charm which enables the use of swarm for scheduling and placement onto host deployed with the docker charm
+
+
+
+**[Flannel-docker Charm](https://github.com/chuckbutler/flannel-docker-charm)** | [Charm Store](https://jujucharms.com/flannel-docker/trusty/)<br />
+   Subordinate charm for SDN for charm deployed docker hosts
+
+**DEPRECATED** **[Calico-docker Charm](https://github.com/chuckbutler/calico-docker-charm)**<br />
+   Subordinate charm for SDN for charm deployed docker hosts
+
+**[Kubernetes bundle](https://github.com/kubernetes/kubernetes/tree/master/cluster/juju/bundles)** | [Charm Store](https://jujucharms.com/u/kubernetes/kubernetes-cluster/)<br />
+   a configurable multi-cloud solution for deploying and managing k8s that runs atop the docker charm to provide scheduling and loadbalancing for docker containers.
+
+**[Hakkasan](https://github.com/chuckbutler/container-dynamics-bundle)**<br />
+   Pluggable ad hoc docker orchestration stack solution w/ dns, service discovery and load balancing.
+
+
+
+
 #### Fun projects:
 
 - [System Zoo](http://github.com/systemzoo)
@@ -95,7 +101,6 @@ You can find us most days on freenode irc at #system-zoo or #Juju.
 
 Supporting tools and charms
 
-- [AnsibleCharm](https://github.com/whitmo/ansible-charm) - library for facilitating the authoring of charms using ansible.
 
 
 #### Exprimental Tooling/Charms:
