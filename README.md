@@ -44,6 +44,9 @@ You can find us most days on freenode irc at #system-zoo or #Juju.
 
 ### Projects of note:
 
+**[Kubernetes bundle](https://github.com/kubernetes/kubernetes/tree/master/cluster/juju/bundles)** | [Charm Store](https://jujucharms.com/u/kubernetes/kubernetes-cluster/)<br />
+   a configurable multi-cloud solution for deploying and managing k8s that runs atop the docker charm to provide scheduling and loadbalancing for docker containers.
+
 **[Consul charm](https://github.com/mbruzek/consul-charm.git)**<br />
   Deploy and manage a consul cluster
 
@@ -84,9 +87,6 @@ You can find us most days on freenode irc at #system-zoo or #Juju.
 
 **DEPRECATED** **[Calico-docker Charm](https://github.com/chuckbutler/calico-docker-charm)**<br />
    Subordinate charm for SDN for charm deployed docker hosts
-
-**[Kubernetes bundle](https://github.com/kubernetes/kubernetes/tree/master/cluster/juju/bundles)** | [Charm Store](https://jujucharms.com/u/kubernetes/kubernetes-cluster/)<br />
-   a configurable multi-cloud solution for deploying and managing k8s that runs atop the docker charm to provide scheduling and loadbalancing for docker containers.
 
 **[Hakkasan](https://github.com/chuckbutler/container-dynamics-bundle)**<br />
    Pluggable ad hoc docker orchestration stack solution w/ dns, service discovery and load balancing.
