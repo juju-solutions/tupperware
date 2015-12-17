@@ -1,0 +1,6 @@
+/// Default header styling
+@mixin containers-header {
+  .banner .nav-primary ul {
+    border-right: 1px solid lighten($brand-color, 12%);
+  }
+}

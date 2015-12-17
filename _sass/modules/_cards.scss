@@ -1,0 +1,18 @@
+@mixin cards {
+  .charm-card__header {
+    h1 {
+      clear: none;
+    }
+
+    ul {
+      margin: 0;
+    }
+  }
+
+  .juju-card__container {
+    li {
+      line-height: 1;
+      font-size: 16px;
+    }
+  }
+}

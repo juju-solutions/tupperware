@@ -1,2 +1,12 @@
+@import 'global-settings';
+
 @import 'vanilla-framework/scss/vanilla';
 @include vanilla;
+
+@import 'modules/header',
+        'modules/core',
+        'modules/cards';
+
+@include containers-header;
+@include containers-core;
+@include cards;

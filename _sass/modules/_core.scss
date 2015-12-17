@@ -1,0 +1,68 @@
+@mixin containers-core {
+  code,
+  pre {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: .75em;
+    background-color: #eee;
+    max-height: 250px;
+    overflow-y: auto;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  table {
+    thead {
+       td, th {
+         background: none;
+       }
+    }
+
+    th, td {
+      padding: 5px;
+      border: 1px solid #eee;
+      background: none;
+    }
+  }
+
+  li {
+    margin-bottom: 0;
+  }
+
+  h3, h4 {
+    clear: both;
+  }
+
+  .md-card-container {
+    width: 464px;
+    min-height: 290px;
+    margin-bottom: 10px;
+    &.left {
+      margin-right: 15px;
+    }
+
+    &.right {
+      margin-left: 15px;
+    }
+
+    &.condensed {
+      .bundle-card__actions-item--demo,
+      .bundle-card__actions-label {
+        display: none;
+      }
+
+      .bundle-card__title {
+        display: inline-block;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .sm-card-container {
+    @extend .md-card-container;
+    width: 221px;
+    min-height: 250px;
+  }
+}
