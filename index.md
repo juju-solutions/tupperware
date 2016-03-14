@@ -54,24 +54,64 @@ A list of projects to follow
   `charms.docker` provides charm authors a python library with a clean and readable way to interface with
   the docker CLI as well as configure the Docker deamon via the DockerOpts manager.
 
+#### [Etcd Layer](https://github.com/chuckbutler/layer-etcd)
+
+Etcd is a key/value store created by CoreOS and is used in several application-container
+based solutions, such as Kubernetes. This layer encapsulates the knowledge the
+~containers team has working with etcd and delivers a stable healthy etcd cluster.
+
+
 ### Charms and Bundles:
 
 #### Kubernetes bundle
 <div class="md-card-container left condensed">
-  <div class="juju-card" data-id="~kubernetes/bundle/kubernetes-cluster"></div>
+  <div class="juju-card" data-id="~containers/bundle/kubernetes-core"></div>
 </div>
 
 The kubernetes-bundle allows you to deploy the many services of Kubernetes to a cloud environment and get started using the Kubernetes technology quickly.
 
 Resources:
 
-[Charm Store](https://jujucharms.com/u/kubernetes/kubernetes-cluster/)  
+[Charm Store](https://jujucharms.com/u/containers/kubernetes-core/)  
 [Source code](https://github.com/kubernetes/kubernetes/tree/master/cluster/juju/bundles)  
-[Kubernetes Layer](#kubernetes-layer)  
+[Kubernetes Layer](https://github.com/mbruzek/layer-k8s/)  
+
+
+#### Auditable Kubernetes
+
+<div class="md-card-container left condensed">
+  <div class="juju-card" data-id="~containers/bundle/auditable-kubernetes"></div>
+</div>
+
+Deploy Kubernetes-core hooked into an ELK cluster to aggregate all your container
+workload logs. Mine and visualize your container infrastructure log messaging with
+Kibana4.
+
+Resources:
+[Charm Store](https://jujucharms.com/u/containers/auditable-kubernetes)
+
+
+#### Swarm Bundle
+
+<div class="md-card-container left condensed">
+  <div class="juju-card" data-id="~lazypower/bundle/swarm-core"></div>
+</div>
+
+The swarm-core bundle allows you to deploy a swarm cluster quickly. It packs in
+some value-add via:
+
+ - Installing and configuring swarm using localized discovery mechanism(s) consul or etcd.
+ - dynamically scale your swarm cluster up/down via juju add-unit and juju remove-unit
+
+This bundle is WIP until it moves to the ~containers namespace.
+
+Resources:
+[Charm Store](https://jujucharms.com/u/lazypower/swarm-core)
+[Swarm Layer](https://github.com/chuckbutler/layer-swarm)
 
 #### Consul charm
 <div class="md-card-container left">
-  <div class="juju-card" data-id="~zoology/trusty/consul"></div>
+  <div class="juju-card" data-id="~containers/trusty/consul"></div>
 </div>
 
 Consul is a tool for discovering and configuring services. This charm deploys
@@ -94,8 +134,9 @@ way to store data across a cluster of machines. Etcd gracefully handles master
 elections during network partitions and will tolerate machine failure,
 including the master.
 
-Resources:  
-[Source code](https://github.com/chuckbutler/etcd-charm.git)
+Resources:
+[Charm Store](https://jujucharms.com/u/containers/etcd)
+[Etcd Layer](https://github.com/chuckbutler/layer-etcd.git)
 
 #### Drone Charm
 <div class="md-card-container left">
@@ -152,7 +193,7 @@ Resources:
 
 #### Logspout Charm
 <div class="md-card-container left">
-  <div class="juju-card" data-id="~lazypower/trusty/logspout"></div>
+  <div class="juju-card" data-id="~containers/trusty/logspout"></div>
 </div>
 
 Log shipping for charm deployed docker hosts
