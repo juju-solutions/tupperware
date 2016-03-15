@@ -91,7 +91,7 @@ Resources:
 [Charm Store](https://jujucharms.com/u/containers/auditable-kubernetes)
 
 
-#### Swarm Bundle
+#### Swarm bundle
 
 <div class="md-card-container left condensed">
   <div class="juju-card" data-id="~lazypower/bundle/swarm-core"></div>
@@ -108,6 +108,21 @@ This bundle is WIP until it moves to the ~containers namespace.
 Resources:
 [Charm Store](https://jujucharms.com/u/lazypower/swarm-core)
 [Swarm Layer](https://github.com/chuckbutler/layer-swarm)
+
+#### ELK Stack bundle
+<div class="md-card-container left">
+  <div class="juju-card" data-id="~containers/bundle/elk-stack"></div>
+</div>
+
+The Elastic Stack — that's Elasticsearch, Logstash, Kibana — are open source
+projects that help you take data from any source, any format and search,
+analyze, and visualize it in real time.
+
+This bundle deploys the core services that comprise the ELK stack.
+
+Resources:
+[Charm Store](https://jujucharms.com/u/containers/elk-stack)
+[Source code](https://github.com/juju-solutions/bundle-elk-stack)
 
 #### Consul charm
 <div class="md-card-container left">
