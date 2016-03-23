@@ -17,11 +17,12 @@ The New Workloads team has a charter to explore and engage with emergent project
 
 ### Honorary members
 
- * [wwitzellIII](https://github.com/wwitzel3)
+ * [cloudguru](https://github.com/cloudguru-bb)
  * [lukasa](https://github.com/lukasa)
- * [whitmo](http://github.com/whitmo) (@[whit](https://twitter/whit))
+ * [whitmo](http://github.com/whitmo)
+ * [wwitzellIII](https://github.com/wwitzel3)
 
-You can find us most days on freenode irc at #system-zoo or #Juju.
+You can find us most days on Freenode irc at #system-zoo or #Juju.
 
 ## Planned work
 
