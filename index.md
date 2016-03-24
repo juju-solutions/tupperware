@@ -55,6 +55,8 @@ A list of projects to follow
   `charms.docker` provides charm authors a python library with a clean and readable way to interface with
   the docker CLI as well as configure the Docker deamon via the DockerOpts manager.
 
+  [Documentation](http://pythonhosted.org/charms.docker)
+
 #### [Etcd Layer](https://github.com/chuckbutler/layer-etcd)
 
 Etcd is a key/value store created by CoreOS and is used in several application-container
