@@ -4,7 +4,9 @@ title: Containers
 permalink: /
 ---
 
-The New Workloads team has a charter to explore and engage with emergent projects in server and cloud technology around how they might benefit or integrate with Juju, particularly in the solution space.
+The Container Ecosystem team has a charter to explore and engage with
+emergent projects in server and cloud technology around how they might benefit
+or integrate with Juju, particularly in the solution space.
 
 ## The people
 
@@ -12,21 +14,60 @@ The New Workloads team has a charter to explore and engage with emergent project
 
 |     | github | twitter | email | website |
 |:---:| ------ | ------- | ----- | ------- |
-![cute](http://gravatar.com/avatar/122d53411de1158f8b333409da91aa39.jpg?s=25) | [chuckbutler](http://github.com/chuckbutler) | @[lazypower](https://twitter.com/lazypower) | [email](mailto:charles.butler@canonical.com) | [blog.dasroot.net](http://blog.dasroot.net)
+![cute](http://gravatar.com/avatar/122d53411de1158f8b333409da91aa39.jpg?s=25) | [chuckbutler](http://github.com/chuckbutler) | @[lazypower](https://twitter.com/lazypower) | [email](mailto:charles.butler@canonical.com) | [dasroot.net](http://dasroot.net)
 ![cute](http://gravatar.com/avatar/94805fb3d3bd48e239ec0d15aac00680.jpg?s=25) | [mbruzek](http://github.com/mbruzek) | @[mattatcanonical](https://twitter.com/mattatcanonical) | [email](mailto:matthew.bruzek@canonical.com) | [bruzer.net](http://bruzer.net)
 
 ### Honorary members
 
  * [cloudguru](https://github.com/cloudguru-bb)
  * [lukasa](https://github.com/lukasa)
+ * [magicaltrout](https://github.com/buggtb)
  * [whitmo](http://github.com/whitmo)
  * [wwitzellIII](https://github.com/wwitzel3)
 
-You can find us most days on Freenode irc at #system-zoo or #Juju.
 
-## Planned work
+You can find us most days on Freenode irc at #Juju.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/S7xUVKCWAXU?VQ=HD720" frameborder="0" allowfullscreen></iframe>
+# Juju Charmer Summit 2016
+
+If you're attending the Juju Charmer Summit in Pasadena CA, this is the section for you!
+
+
+### Installing Juju
+
+You've probably already installed Juju eiher in the main track, or came with
+prior knowledge. If not, there are instructions for:
+
+- [Ubuntu](https://jujucharms.com/docs/stable/getting-started-general#1.-install-juju)
+- [MacOS](https://jujucharms.com/docs/stable/reference-releases)
+- [Windows](https://jujucharms.com/docs/stable/reference-releases)
+
+You'll likely want to install the 2.0 release, so you can leverage the best of
+the new features. We dont recommend placing production deployments on juju 2.0
+just yet.
+
+### Your first docker based charm
+
+There have been a few articles published about charming with docker and layers.
+I'll assume you're familiar with charm-tools and ready to get started charming
+with layer-docker.
+
+Start with the [Layer-Docker Deep Dive](http://dasroot.net/posts/2016-08-03-layer-docker-deep-dive/)
+
+
+### Advanced Container Deployments
+
+If you're less interested in creating docker based charms and just want to
+kick the tires of a container scheduler/manager - give our Kubernetes bundle
+a go
+
+`juju deploy canonical-kubernetes`
+
+
+If you have any further questions, I'm happy to lend a hand. Come find me
+in the orange shirt :)
+
+- lazy
 
 ## Projects
 
@@ -77,13 +118,13 @@ Resources:
 
 [Charm Store](https://jujucharms.com/u/containers/kubernetes-core/)  
 [Source code](https://github.com/kubernetes/kubernetes/tree/master/cluster/juju/bundles)  
-[Kubernetes Layer](https://github.com/mbruzek/layer-k8s/)  
+[Kubernetes Layer](https://github.com/juju-solutions/kubernetes/tree/juju-release-v1.4.0)
 
 
-#### Auditable Kubernetes
+#### Observable Kubernetes
 
 <div class="md-card-container left condensed">
-  <div class="juju-card" data-id="~containers/bundle/auditable-kubernetes"></div>
+  <div class="juju-card" data-id="~containers/bundle/observable-kubernetes"></div>
 </div>
 
 Deploy Kubernetes-core hooked into an ELK cluster to aggregate all your container
@@ -91,26 +132,8 @@ workload logs. Mine and visualize your container infrastructure log messaging wi
 Kibana4.
 
 Resources:
-[Charm Store](https://jujucharms.com/u/containers/auditable-kubernetes)
+[Charm Store](https://jujucharms.com/u/containers/observable-kubernetes)
 
-
-#### Swarm bundle
-
-<div class="md-card-container left condensed">
-  <div class="juju-card" data-id="~lazypower/bundle/swarm-core"></div>
-</div>
-
-The swarm-core bundle allows you to deploy a swarm cluster quickly. It packs in
-some value-add via:
-
- - Installing and configuring swarm using localized discovery mechanism(s) consul or etcd.
- - dynamically scale your swarm cluster up/down via juju add-unit and juju remove-unit
-
-This bundle is WIP until it moves to the ~containers namespace.
-
-Resources:
-[Charm Store](https://jujucharms.com/u/lazypower/swarm-core)
-[Swarm Layer](https://github.com/chuckbutler/layer-swarm)
 
 #### ELK Stack bundle
 <div class="md-card-container left">
@@ -173,6 +196,18 @@ your repository. For more information, see the
 Resources:  
 [Source code](https://github.com/chuckbutler/drone-ci-charm)
 
+
+#### Docker NGINX Charm
+
+an example for charming with docker by leverage an existing docker container of your service, and deploy it with a Juju charm.
+
+Resources:  
+[Source code](https://github.com/chuckbutler/docker-nginx-charm)
+
+
+### Older Deprecated Work
+
+
 #### DNS Charm
 <div class="md-card-container left">
   <div class="juju-card" data-id="~zoology/trusty/dns"></div>
@@ -192,12 +227,7 @@ Specific instructions how to extend/add providers is outlined in
 Resources:  
 [Source code](https://github.com/chuckbutler/dns-charm.git)
 
-#### Docker NGINX Charm
 
-an example for charming with docker by leverage an existing docker container of your service, and deploy it with a Juju charm.
-
-Resources:  
-[Source code](https://github.com/chuckbutler/docker-nginx-charm)
 
 #### Registrator Charm
 <div class="md-card-container left">
@@ -209,6 +239,8 @@ A subordinate charm enabling charm deployed docker hosts service discovery via e
 Resources:  
 [Source code](https://github.com/whitmo/registrator-charm)
 
+
+
 #### Logspout Charm
 <div class="md-card-container left">
   <div class="juju-card" data-id="~containers/trusty/logspout"></div>
@@ -219,7 +251,7 @@ Log shipping for charm deployed docker hosts
 Resources:  
 [Source code](https://github.com/chuckbutler/logspout-charm)
 
-### Classic Charms
+
 
 **DEPRECATED** **[Docker Charm](http://github.com/chuckbutler/docker-charm)** | [Charm Store](https://jujucharms.com/docker/trusty/) <br />
    A charm for deploying a cluster of docker hosts that support extension by charms for service discovery, networking, logging and other fine things.
@@ -227,42 +259,15 @@ Resources:
 **DEPRECATED** **[Swarm Charm](http://github.com/whitmo/swarm-charm)**<br />
    A subordinate charm which enables the use of swarm for scheduling and placement onto host deployed with the docker charm
 
-**[Flannel-docker Charm](https://github.com/chuckbutler/flannel-docker-charm)** | [Charm Store](https://jujucharms.com/flannel-docker/trusty/)<br />
+**DEPRECATED** **[Flannel-docker Charm](https://github.com/chuckbutler/flannel-docker-charm)** | [Charm Store](https://jujucharms.com/flannel-docker/trusty/)<br />
    Subordinate charm for SDN for charm deployed docker hosts
 
 **DEPRECATED** **[Calico-docker Charm](https://github.com/chuckbutler/calico-docker-charm)**<br />
    Subordinate charm for SDN for charm deployed docker hosts
 
-**[Hakkasan](https://github.com/chuckbutler/container-dynamics-bundle)**<br />
+**DEPRECATED** **[Hakkasan](https://github.com/chuckbutler/container-dynamics-bundle)**<br />
    Pluggable ad hoc docker orchestration stack solution w/ dns, service discovery and load balancing.
 
-
-### Fun projects:
-
-- [System Zoo](http://github.com/systemzoo)
-  * sound system ops dj (Dockercon Hackathon Project) - Canary feedback system for rolling out dockerized web apps
-
-
-### Experimental Tooling/Charms:
-
-These charms/tools were created to experiment with the ecosystem and make assertions
-about the tooling we are delivering, and how to best ulitilze/leverage the
-infrastructure in a user friendly manner.
-
-- [Docker Build Hook Charm](https://github.com/chuckbutler/docker-build-hook-charm)
-    Provides webhooks for building a docker-container on push, and immediate
-    recycling of the service. PHAUX PAAS delivery of DOCKERFILES on top of juju.
-- [Dockerfile Charm](https://github.com/chuckbutler/dockerfile-charm)
-    Deploy any repository from a Dockerfile, works hand in hand with the docker-build-hook charm
-- [Docker Compose Charm](https://github.com/chuckbutler/docker-compose-charm)
-    Deploy any application into the Juju Docker infrastructure that contains a
-    `docker-compose.yaml` file, to easily spin up all dependent services.
-- [Squid Deb Proxy Charm](https://github.com/chuckbutler/squid-deb-proxy-charm)
-    Cache APT sources in an environment (on the same subnet) and distribute
-    locally to speed up deployments/updates across a large cluster of services.
-
-**Service process handling for charms**<br />
-Juju native plugins for handling container runtimes and other long running processes
 
 ## Collaborating
 
@@ -287,13 +292,3 @@ Things we think would be awesome to implement.
 - Juju provider for Marathon
 - Docker machine integration for docker charm
 
-## Interested in Systems and workloads?
-
-System Zoo is a community gathering of people driving and exploring
-interesting workloads. We accept dabblers and hackers of all walks of life in
-development, ops, networking, social engineering, etc. If you're doing something
-interesting, we'd love to chat!
-
-You can find us in [#system-zoo](https://webchat.freenode.net/?channels=system-zoo)
-on irc.freenode.net, with an upcoming schedule of media, podcasts, and blog
-forthcoming as time allows.
