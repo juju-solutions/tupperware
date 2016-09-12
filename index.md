@@ -78,14 +78,14 @@ A list of projects to follow
 #### [Docker Layer](http://github.com/juju-solutions/layer-docker)
   A charm layer for use in the `charm build` process to provide Docker, its principal tooling (docker-compose), and maintain an up-to-date docker daemon on the unit.
 
-#### [Flannel Layer](http://github.com/chuckbutler/layer-flannel)
+#### [Flannel Layer](http://github.com/juju-solutions/layer-flannel)
   Flannel is an overlay network developed by CoreOS. This particular charm layer
   makes use of the Docker Layer, and delivers Flannel in a bootstrap docker
   instance to configure docker networking on the host, delivered from an
   app container, to effect change on the workload-runtime docker
   on the unit.
 
-#### [Kubernetes Layer](http://github.com/mbruzek/layer-k8s)
+#### [Kubernetes Layer](https://github.com/kubernetes/kubernetes/tree/master/cluster/juju/layers/kubernetes)
   Kubernetes is a container orchestrator and scheduler. This layer is
   built on top of the Docker Layer. This layer currently launches both
   leader and worker nodes to each unit. This is a rewrite from the existing
