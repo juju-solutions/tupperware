@@ -35,7 +35,7 @@ If you're attending the Juju Charmer Summit in Pasadena CA, this is the section 
 
 ### Installing Juju
 
-You've probably already installed Juju eiher in the main track, or came with
+You've probably already installed Juju either in the main track, or came with
 prior knowledge. If not, there are instructions for:
 
 - [Ubuntu](https://jujucharms.com/docs/stable/getting-started-general#1.-install-juju)
